@@ -49,11 +49,11 @@ public class LoginActivity extends AppCompatActivity {
             public void successAction(Object data) {
 
                 Intent i = new Intent(this.getContext(), HomeActivity.class);
-                //Usuario usuario = (Usuario) data;
-                //Bundle bundle = new Bundle();
-                //bundle.putSerializable("usuario", usuario);
+                Usuario usuario = (Usuario) data;
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("usuario", usuario);
 
-                //i.putExtras(bundle);
+                i.putExtras(bundle);
 
                 startActivity(i);
 

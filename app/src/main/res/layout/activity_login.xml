@@ -7,77 +7,86 @@ android:layout_height="match_parent"
 android:padding="@dimen/padding_outer_layout"
 tools:context="emiliano.sangoi.apps.spmovil.LoginActivity">
 
-<TextView
-    android:id="@+id/labelUsername"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentStart="true"
-    android:textStyle="bold"
-    android:layout_alignParentTop="true"
-    android:layout_marginTop="39dp"
-    android:textSize="@dimen/txts_default"
-    android:text="Usuario:" />
 
-<EditText
-    android:id="@+id/etUsername"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/labelUsername"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="10dp"
-    android:height="24dp"
-    android:background="@drawable/borde_oscuro"
-    android:inputType="textPersonName"
-    android:padding="12dp"
-    android:selectAllOnFocus="false"
-    android:text="@string/user_ej"
-    android:textSize="@dimen/txts_default" />
 
-<TextView
-    android:id="@+id/labelPwd"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/etUsername"
-    android:layout_marginTop="30dp"
-    android:textStyle="bold"
-    android:textSize="@dimen/txts_default"
-    android:text="Contraseña:" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
 
-<EditText
-    android:id="@+id/etPassword"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/labelPwd"
-    android:layout_marginTop="10dp"
-    android:background="@drawable/borde_oscuro"
-    android:padding="12dp"
-    android:height="24dp"
-    android:inputType="textPassword"
-    android:text="@string/pwd_user_ej"
-    android:textSize="@dimen/txts_default" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainLayout"
+            android:orientation="vertical">
 
-<Button
-    android:id="@+id/btnIngresar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true"
-    android:layout_alignParentBottom="true"
-    android:background="@color/colorPrimaryDark"
-    android:textColor="@color/colorWhite"
-    android:onClick="onLogin"
-    android:text="Ingresar"
-    android:padding="@dimen/padding_btn"
-    android:textSize="@dimen/txts_5" />
+            <TextView
+                android:id="@+id/labelUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="39dp"
+                android:textSize="@dimen/txts_default"
+                android:text="Usuario:" />
 
-<TextView
-    android:id="@+id/tvMsgLogin"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/btnIngresar"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="58dp"
-    android:text=""
-    android:textSize="24sp" />
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelUsername"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:height="24dp"
+                android:background="@drawable/borde_oscuro"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:selectAllOnFocus="false"
+                android:text="@string/user_ej"
+                android:textSize="@dimen/txts_default" />
+
+            <TextView
+                android:id="@+id/labelPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etUsername"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/txts_default"
+                android:text="Contraseña:" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelPwd"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/borde_oscuro"
+                android:padding="12dp"
+                android:height="24dp"
+                android:inputType="textPassword"
+                android:text="@string/pwd_user_ej"
+                android:textSize="@dimen/txts_default" />
+
+            <Button
+                android:id="@+id/btnIngresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="30sp"
+                android:onClick="onLogin"
+                android:text="Ingresar"
+                android:padding="@dimen/padding_btn"
+                android:textSize="@dimen/txts_5" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
 
 
 

@@ -3,8 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <item android:id="@+id/main_menu_item_salir"
-        android:orderInCategory="100"
+    <item android:id="@+id/mainMenuMisUbicaciones"
+        android:orderInCategory="10"
+        app:showAsAction="never"
+        android:title="@string/strMainMenuMisUbicacionesLabel">
+    </item>
+
+    <item android:id="@+id/mainMenuMiPerfil"
+        android:orderInCategory="20"
+        app:showAsAction="never"
+        android:title="@string/strMainMenuMiPerfilLabel">
+    </item>
+
+    <item android:id="@+id/mainMenuAcercaDe"
+        android:orderInCategory="30"
+        app:showAsAction="never"
+        android:title="@string/strMainMenuAcercaDeLabel">
+    </item>
+
+    <item android:id="@+id/mainMenuItemSalir"
+        android:orderInCategory="40"
         app:showAsAction="never"
         android:title="@string/main_menu_item_salir_label">
     </item>

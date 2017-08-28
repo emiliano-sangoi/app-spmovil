@@ -1,9 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/padding_outer_layout"
     tools:context="emiliano.sangoi.apps.spmovil.HomeActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainLayout"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvTituloPpal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Bienvenido!!!"
+                android:textSize="@dimen/txts_1"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                />
+
+            <TextView
+                android:id="@+id/tvIntroHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10sp"
+                android:text="@string/msgIntro"
+                android:textSize="@dimen/txts_default"
+                android:textColor="@color/colorBlack"
+                />
+
+            <TextView
+                android:id="@+id/tvTituloMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Productos disponibles"
+                android:layout_marginTop="10sp"
+                android:textSize="@dimen/txts_2"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                />
+
+
+            <Button
+                android:id="@+id/btnMenuOpPronoExtTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="10sp"
+                android:text="Temperatura"
+                android:padding="@dimen/padding_btn"
+                android:textSize="@dimen/txts_5" />
+
+            <Button
+                android:id="@+id/btnMenuOpPronoExtPrec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="10sp"
+                android:text="Precipitación"
+                android:padding="@dimen/padding_btn"
+                android:textSize="@dimen/txts_5" />
+
+            <Button
+                android:id="@+id/btnMenuOpPronoExtViento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="10sp"
+                android:text="Viento"
+                android:padding="@dimen/padding_btn"
+                android:textSize="@dimen/txts_5" />
+
+            <Button
+                android:id="@+id/btnMenuOpRadarFICH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="10sp"
+                android:text="Radar FICH"
+                android:padding="@dimen/padding_btn"
+                android:textSize="@dimen/txts_5" />
+
+            <TextView
+                android:id="@+id/tvMsg0productos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="No posee acceso a ningun producto."
+                android:layout_marginTop="10sp"
+                android:visibility="gone"
+                android:textSize="@dimen/txts_default"
+                android:textColor="@color/colorWarning"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

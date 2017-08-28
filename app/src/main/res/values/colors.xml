@@ -7,6 +7,8 @@
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#FFF</color>
     <color name="colorGray">#ccc</color>
+    <color name="colorRed">#fa000d</color>
+    <color name="colorWarning">#d6d940</color>
 
     <color name="colorMarine">#57BC90</color>
     <color name="colorForest">#015249</color>

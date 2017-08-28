@@ -3,4 +3,14 @@
     <string name="main_menu_item_salir_label">Salir</string>
     <string name="user_ej">emiliano.sangoi</string>
     <string name="pwd_user_ej">meteoro1</string>
+
+    <!--Activities-->
+    <string name="msgIntro">En esta aplicacion podra consultar distintos pronosticos meteorologicos. El acceso a estos productos se gestiona desde el sistema SPM.</string>
+
+
+    <!--Main menu-->
+    <string name="strMainMenuMisUbicacionesLabel">Mis ubicaciones</string>
+    <string name="strMainMenuMiPerfilLabel">Mi perfil</string>
+    <string name="strMainMenuAcercaDeLabel">Acerca de ...</string>
+    <string name="strMainMenuSalirLabel">Cerrar sesión</string>
 </resources>

@@ -7,11 +7,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * Esta clase permite comunicarse con la api definida en la web del sistema SPM (http://fich.unl.edu.ar/cevarcam).
@@ -61,7 +63,9 @@ public class SPMApiHandler {
 
         //Parametros de configuracion:
         this.host = "192.168.1.106";
-        this.port = 4567;
+        //this.host = "127.0.0.1";
+        //this.port = 4567;
+        this.port = 80;
 
         //Endpoints utilizados:
         this.endpointLogin = this.getBaseUrl() + "/login";
@@ -82,6 +86,7 @@ public class SPMApiHandler {
         params.put("username", username.toString());
         params.put("password", password.toString());
 
+        Log.i("URL: ", this.getEndpointLogin());
 
         JsonObjectRequest request = new JsonObjectRequest(this.getEndpointLogin(), new JSONObject(params),
                 new Response.Listener<JSONObject>() {
@@ -89,14 +94,14 @@ public class SPMApiHandler {
                     @Override
                     public void onResponse(JSONObject response) {
 
-                        //Gson gson = new Gson();
+                        Gson gson = new Gson();
+                        Usuario usuario = gson.fromJson(response.toString(), Usuario.class);
 
-                        //usuario = gson.fromJson(response.toString(), Usuario.class);
+                        callback.successAction(usuario);
 
-                        callback.successAction(new String());
+                        //Log.i("USUARIO: ", response.toString());
+                        //Log.i("Cant. de produdctos: ", (new Integer(usuario.getProductos().length)).toString() );
 
-                        Log.i("USUARIO: ", response.toString());
-                        //Log.i("ES PACIENTE: ", usuario.esPaciente() ? "Si" : "No");
 
                     }
 
